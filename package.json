@@ -1,0 +1,47 @@
+{
+  "name": "kinematic-inpaint",
+  "version": "1.0.0",
+  "description": "3D rigid kinematic occlusion inpainting & bone-length trilateration for monocular pose estimation (MediaPipe / MoveNet / YOLO-Pose). Solves Olympic bumper plate & gym machinery joint dropouts.",
+  "keywords": [
+    "mediapipe",
+    "pose-estimation",
+    "biomechanics",
+    "occlusion-inpainting",
+    "trilateration",
+    "kalman-filter",
+    "computer-vision",
+    "kinematics"
+  ],
+  "author": "David Dabert <https://github.com/david-dabert>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/david-dabert/kinematic-inpaint.git"
+  },
+  "homepage": "https://github.com/david-dabert/kinematic-inpaint#readme",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build && npm run test"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0"
+  }
+}
